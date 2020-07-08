@@ -9,4 +9,4 @@ before_install:
   - docker build -t travis-build .
 
 script:
-  - docker run travis-test-build --version | grep prospector
+  - docker run travis-build --version | grep prospector
