@@ -13,7 +13,7 @@ LABEL org.label-schema.schema-version="1.0" \
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
 apk add --no-cache --virtual .build-base build-base && \
-pip install --no-cache-dir -r /tmp/requirements.txt && \
+pip install --no-cache-dir --compile -r /tmp/requirements.txt && \
 apk del .build-base
 
 ENTRYPOINT ["/usr/local/bin/prospector"]
