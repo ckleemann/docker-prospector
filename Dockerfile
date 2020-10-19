@@ -11,9 +11,7 @@ LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.build-date=$BUILD_DATE
 
 COPY requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
-apk add --no-cache --virtual .build-base build-base && \
+RUN apk add --no-cache --virtual .build-base build-base && \
 pip install --no-cache-dir --compile -r /tmp/requirements.txt && \
-apk del .build-base
 
 ENTRYPOINT ["/usr/local/bin/prospector"]
