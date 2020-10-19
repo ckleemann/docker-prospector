@@ -12,6 +12,6 @@ LABEL org.label-schema.schema-version="1.0" \
 
 COPY requirements.txt /tmp/requirements.txt
 RUN apk add --no-cache --virtual .build-base build-base && \
-pip install --no-cache-dir --compile -r /tmp/requirements.txt && \
+pip install --no-cache-dir --compile -r /tmp/requirements.txt
 
 ENTRYPOINT ["/usr/local/bin/prospector"]
