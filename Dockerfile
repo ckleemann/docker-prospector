@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM python:3.9.0
 
 ARG VCS_REF
 ARG VERSION
@@ -11,9 +11,6 @@ LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.build-date=$BUILD_DATE
 
 COPY requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
-apk add --no-cache --virtual .build-base build-base && \
-pip install --no-cache-dir --compile -r /tmp/requirements.txt && \
-apk del .build-base
+RUN pip install --no-cache-dir --compile -r /tmp/requirements.txt
 
 ENTRYPOINT ["/usr/local/bin/prospector"]
