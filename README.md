@@ -1,5 +1,5 @@
 # prospector docker image
-[![Build Status](https://travis-ci.org/ckleemann/docker-prospector.svg?branch=master)](https://travis-ci.org/ckleemann/docker-prospector)
+![Build Status](https://github.com/ckleemann/docker-prospector/workflows/ci/badge.svg)
 
 This docker image provides the latest version of [prospector](https://pypi.org/project/prospector/) with all dependencies e.g. ```prospector[with_everything]```. The prospector version is automatically updated and pushed to [docker hup](https://hub.docker.com/r/ckleemann/prospector).
 
