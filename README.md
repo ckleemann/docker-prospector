@@ -10,7 +10,7 @@ To use this image inside a GitLab CI environment add the following snippet to yo
 prospector:
   image:
     name: ckleemann/prospector
-    entrypoint: [""]gui
+    entrypoint: [""]
   before_script:
     - pip install -r requirements.txt
   script:
