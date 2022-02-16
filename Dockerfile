@@ -1,4 +1,4 @@
-FROM python:3.9.10
+FROM python:3.10.2
 
 ARG VCS_REF
 ARG VERSION
