@@ -17,3 +17,8 @@ jobs:
       - name: Run Container
         run: |
           docker run test-build --version | grep prospector
+
+      - name: Run Container with a component from extra
+        run: |
+          docker run --entrypoint bandit test-build --version | grep bandit
+
