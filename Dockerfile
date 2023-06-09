@@ -13,7 +13,7 @@ LABEL org.label-schema.schema-version="1.0" \
 RUN groupadd prospector && useradd --no-log-init -r -g prospector prospector
 
 COPY requirements.txt /tmp/requirements.txt
-RUN --mount=type=cache,target=/root/.cache/pip pip install --no-cache-dir --compile -r /tmp/requirements.txt
+RUN pip install --no-cache-dir --compile -r /tmp/requirements.txt
 
 USER prospector
 
