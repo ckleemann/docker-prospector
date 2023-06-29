@@ -1,4 +1,4 @@
-FROM python:3.11.4
+FROM python:3.11.4-bullseye
 
 ARG VCS_REF
 ARG VERSION
