@@ -1,4 +1,4 @@
-pip==24.3
+pip==24.3.1
 wheel==0.44.0
 setuptools==75.2.0
 prospector[with_everything]==1.12.1
